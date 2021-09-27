@@ -5,9 +5,6 @@ import styled from "styled-components";
 import { useState } from 'react';
 
 const NavbarContainer = styled.div`
-  background-color: #212529;
-  width: 100%;
-  height: 10%;
   bottom: 0;
 `
 
@@ -15,6 +12,9 @@ const NavbarLogoToggle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #212529;
+  width: 100%;
+  height: 10%;
 `
 
 const IconContainer = styled.div`
@@ -26,8 +26,13 @@ const IconContainer = styled.div`
   align-items: center;
 `
 
-const NavbarMenu = styled.div`
-  background-color: red;
+const NavbarMenu = styled.div` 
+  position: absolute;
+  background: black;
+  bottom: 10%;
+  width: 100%;
+  color: white;
+  height: 70%;
 `
 
 const Navbar = () => {
@@ -52,8 +57,9 @@ const Navbar = () => {
       </NavbarLogoToggle>
 
       <NavbarMenu>
-        algo
+        <p>algo</p>
       </NavbarMenu>
+
 
     </NavbarContainer>
   )
