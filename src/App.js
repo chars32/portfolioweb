@@ -1,7 +1,8 @@
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 
 import styled from 'styled-components';
 import ContentContainer from './components/Content';
+import NavbarContainer from './components/NavbarContainer';
 
 const MainContainer = styled.div`
   background-color: #031633;
@@ -16,7 +17,8 @@ function App() {
   return (
     <MainContainer className="App">
       <ContentContainer />
-      <Navbar />
+      {/* <Navbar /> */}
+      <NavbarContainer />
     </MainContainer>
   );
 }

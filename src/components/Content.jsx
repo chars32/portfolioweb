@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ContentStyle = styled.div`
-height: 90%;
+height: 100%;
 `
 
 const ContentContainer = ({ children }) => {
