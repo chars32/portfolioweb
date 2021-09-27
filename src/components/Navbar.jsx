@@ -1,7 +1,8 @@
 import Logo from '../assets/logo.png'
-import { BsFileArrowUp } from 'react-icons/bs'
+import { BsFileArrowUp, BsFileArrowDown } from 'react-icons/bs'
 
 import styled from "styled-components";
+import { useState } from 'react';
 
 const NavbarContainer = styled.div`
   background-color: #212529;
@@ -25,20 +26,28 @@ const IconContainer = styled.div`
   align-items: center;
 `
 
-const BsFileArrowUp3 = styled(BsFileArrowUp)`
-  font-size: 1.5rem;
-`
-
 const NavbarMenu = styled.div`
   background-color: red;
 `
+
 const Navbar = () => {
+  const [iconState, setIconState] = useState(false)
   return (
     <NavbarContainer>
       <NavbarLogoToggle>
         <img src={Logo} alt="" />
         <IconContainer>
-          <BsFileArrowUp3 />
+          {
+            iconState ?
+              <BsFileArrowDown
+                style={{ fontSize: "1.5rem" }}
+                onClick={() => { setIconState(!iconState) }}
+              /> :
+              <BsFileArrowUp
+                style={{ fontSize: "1.5rem" }}
+                onClick={() => { setIconState(!iconState) }}
+              />
+          }
         </IconContainer>
       </NavbarLogoToggle>
 
