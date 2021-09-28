@@ -17,7 +17,6 @@ function App() {
   return (
     <MainContainer className="App">
       <ContentContainer />
-      {/* <Navbar /> */}
       <NavbarContainer />
     </MainContainer>
   );
