@@ -5,7 +5,7 @@ import Logo from '../assets/logo.png'
 import { BsFileArrowUp, BsFileArrowDown } from 'react-icons/bs'
 
 const Navbarmain = styled.div`
-    height: 75%;
+    height: 100%;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -13,7 +13,7 @@ const Navbarmain = styled.div`
 `
 
 const Navicons = styled.div`
-    height: 13.35%;
+    height: 10%;
     background-color: lightgray;
     width: 100%;
     position: absolute;
@@ -25,12 +25,16 @@ const Navicons = styled.div`
 `
 
 const Navtext = styled.div`
-    height: 100%;
-    background-color: black;
-    width: 100%;
-    transform: translateY(${({ naviconsState }) => naviconsState ? "0" : "100%"});
-    transition: transform 0.5s ease-in-out;
-`
+  color: white;
+  width: 100%;
+  height: 70%;
+  background-color: black;
+  position: absolute;
+  bottom: 10%;
+  transform: translateY(${({ naviconsState }) => naviconsState ? "0" : "100%"});
+  transition: transform 0.5s ease-in-out;
+  `
+// padding: 1rem 0.75rem;
 
 const IconContainer = styled.div`
   width: 3.25rem;
@@ -46,7 +50,29 @@ const NavbarContainer = () => {
 
   return (
     <Navbarmain>
-      <Navtext naviconsState={naviconsState} />
+      <Navtext naviconsState={naviconsState}>
+        {/* <div style={{
+          padding: "1rem 0.815rem",
+          display: "flex",
+          alignItems: "center",
+          fontSize: "20px",
+        }}>
+          <BsFileArrowUp />
+          <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+        </div> */}
+        <div>
+          <div style={{ height: '14.28%', fontSize: '15px' }}>1</div>
+          <div style={{ height: '14.28%', fontSize: '15px' }}>2</div>
+          <div style={{ height: '14.28%', fontSize: '15px' }}>3</div>
+          <div style={{ height: '14.28%', fontSize: '15px' }}>4</div>
+          <div style={{ height: '14.28%', fontSize: '15px' }}>5</div>
+          <div style={{ height: '14.28%', fontSize: '15px' }}>6</div>
+          <div style={{ height: '14.28%', fontSize: '15px' }}>7</div>
+        </div>
+        <div>
+          socials
+        </div>
+      </Navtext>
       <Navicons>
         <img src={Logo} alt="" />
         <IconContainer>
