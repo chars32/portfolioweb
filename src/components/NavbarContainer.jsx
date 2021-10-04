@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Logo from '../assets/logo.png'
 import { BsFileArrowUp, BsFileArrowDown } from 'react-icons/bs'
+import { AiOutlineLinkedin, AiFillFacebook, AiFillGithub } from "react-icons/ai";
 
 const Navbarmain = styled.div`
     height: 100%;
@@ -33,8 +34,8 @@ const Navtext = styled.div`
   bottom: 10%;
   transform: translateY(${({ naviconsState }) => naviconsState ? "0" : "100%"});
   transition: transform 0.5s ease-in-out;
+  padding: 1.0625rem 0.8125rem;
   `
-// padding: 1rem 0.75rem;
 
 const IconContainer = styled.div`
   width: 3.25rem;
@@ -51,26 +52,77 @@ const NavbarContainer = () => {
   return (
     <Navbarmain>
       <Navtext naviconsState={naviconsState}>
-        {/* <div style={{
-          padding: "1rem 0.815rem",
-          display: "flex",
-          alignItems: "center",
-          fontSize: "20px",
-        }}>
-          <BsFileArrowUp />
-          <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
-        </div> */}
-        <div>
-          <div style={{ height: '14.28%', fontSize: '15px' }}>1</div>
-          <div style={{ height: '14.28%', fontSize: '15px' }}>2</div>
-          <div style={{ height: '14.28%', fontSize: '15px' }}>3</div>
-          <div style={{ height: '14.28%', fontSize: '15px' }}>4</div>
-          <div style={{ height: '14.28%', fontSize: '15px' }}>5</div>
-          <div style={{ height: '14.28%', fontSize: '15px' }}>6</div>
-          <div style={{ height: '14.28%', fontSize: '15px' }}>7</div>
+        <div style={{ height: '90%' }}>
+          <div style={{
+            height: '14.28%',
+            fontSize: '20px',
+            display: "flex",
+            alignItems: "center",
+          }}>
+            <BsFileArrowUp />
+            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+          </div>
+          <div style={{
+            height: '14.28%',
+            fontSize: '20px',
+            display: "flex",
+            alignItems: "center",
+          }}>
+            <BsFileArrowUp />
+            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+          </div>
+          <div style={{
+            height: '14.28%',
+            fontSize: '20px',
+            display: "flex",
+            alignItems: "center",
+          }}>
+            <BsFileArrowUp />
+            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+          </div>
+          <div style={{
+            height: '14.28%',
+            fontSize: '20px',
+            display: "flex",
+            alignItems: "center",
+          }}>
+            <BsFileArrowUp />
+            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+          </div>
+          <div style={{
+            height: '14.28%',
+            fontSize: '20px',
+            display: "flex",
+            alignItems: "center",
+          }}>
+            <BsFileArrowUp />
+            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+          </div>
+          <div style={{
+            height: '14.28%',
+            fontSize: '20px',
+            display: "flex",
+            alignItems: "center",
+          }}>
+            <BsFileArrowUp />
+            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+          </div>
+          <div style={{
+            height: '14.28%',
+            fontSize: '20px',
+            display: "flex",
+            alignItems: "center",
+          }}>
+            <BsFileArrowUp />
+            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+          </div>
         </div>
-        <div>
-          socials
+        <div style={{ height: '10%' }}>
+          <div style={{ height: '100%', fontSize: '25px', display: 'flex', justifyContent: 'space-evenly' }}>
+            <AiOutlineLinkedin style={{ height: '100%', fontSize: '25px' }} />
+            <AiFillFacebook style={{ height: '100%', fontSize: '25px' }} />
+            <AiFillGithub style={{ height: '100%', fontSize: '25px' }} />
+          </div>
         </div>
       </Navtext>
       <Navicons>
