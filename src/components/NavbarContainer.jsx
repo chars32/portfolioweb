@@ -55,7 +55,7 @@ const NavbarContainer = () => {
         <div style={{ height: '90%' }}>
           <div style={{
             height: '14.28%',
-            fontSize: '20px',
+            fontSize: '18px',
             display: "flex",
             alignItems: "center",
           }}>
@@ -64,57 +64,57 @@ const NavbarContainer = () => {
           </div>
           <div style={{
             height: '14.28%',
-            fontSize: '20px',
+            fontSize: '18px',
             display: "flex",
             alignItems: "center",
           }}>
             <BsFileArrowUp />
-            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+            <span style={{ marginLeft: '0.5rem' }}>Somethings about me</span>
           </div>
           <div style={{
             height: '14.28%',
-            fontSize: '20px',
+            fontSize: '18px',
             display: "flex",
             alignItems: "center",
           }}>
             <BsFileArrowUp />
-            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+            <span style={{ marginLeft: '0.5rem' }}>What can I do</span>
           </div>
           <div style={{
             height: '14.28%',
-            fontSize: '20px',
+            fontSize: '18px',
             display: "flex",
             alignItems: "center",
           }}>
             <BsFileArrowUp />
-            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+            <span style={{ marginLeft: '0.5rem' }}>My personal projects</span>
           </div>
           <div style={{
             height: '14.28%',
-            fontSize: '20px',
+            fontSize: '18px',
             display: "flex",
             alignItems: "center",
           }}>
             <BsFileArrowUp />
-            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+            <span style={{ marginLeft: '0.5rem' }}>Career path & Experience</span>
           </div>
           <div style={{
             height: '14.28%',
-            fontSize: '20px',
+            fontSize: '18px',
             display: "flex",
             alignItems: "center",
           }}>
             <BsFileArrowUp />
-            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+            <span style={{ marginLeft: '0.5rem' }}>Testimonials & Certificates</span>
           </div>
           <div style={{
             height: '14.28%',
-            fontSize: '20px',
+            fontSize: '18px',
             display: "flex",
             alignItems: "center",
           }}>
             <BsFileArrowUp />
-            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
+            <span style={{ marginLeft: '0.5rem' }}>Contact me</span>
           </div>
         </div>
         <div style={{ height: '10%' }}>
