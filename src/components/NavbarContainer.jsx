@@ -57,6 +57,17 @@ const NavBarItem = styled.div`
   align-items: center;
 `
 
+const NavBarIconsContainer = styled.div`
+  height: 10%;
+`
+
+const NavBarIconsBox = styled.div`
+  height: 100%;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-evenly
+`
+
 const NavbarContainer = () => {
   const [naviconsState, setNaviconsState] = useState(false)
 
@@ -83,13 +94,13 @@ const NavbarContainer = () => {
             )
           }
         </NavBarTextContainer>
-        <div style={{ height: '10%' }}>
-          <div style={{ height: '100%', fontSize: '25px', display: 'flex', justifyContent: 'space-evenly' }}>
+        <NavBarIconsContainer>
+          <NavBarIconsBox>
             <AiOutlineLinkedin style={{ height: '100%', fontSize: '25px' }} />
             <AiFillFacebook style={{ height: '100%', fontSize: '25px' }} />
             <AiFillGithub style={{ height: '100%', fontSize: '25px' }} />
-          </div>
-        </div>
+          </NavBarIconsBox>
+        </NavBarIconsContainer>
       </Navtext>
       <Navicons>
         <img src={Logo} alt="" />
