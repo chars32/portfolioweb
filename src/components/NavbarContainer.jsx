@@ -6,23 +6,23 @@ import { BsFileArrowUp, BsFileArrowDown } from 'react-icons/bs'
 import { AiOutlineLinkedin, AiFillFacebook, AiFillGithub } from "react-icons/ai";
 
 const Navbarmain = styled.div`
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
 `
 
 const Navicons = styled.div`
-    height: 10%;
-    background-color: lightgray;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #212529;
+  height: 10%;
+  background-color: lightgray;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212529;
 `
 
 const Navtext = styled.div`
@@ -46,77 +46,43 @@ const IconContainer = styled.div`
   align-items: center;
 `
 
+const NavBarTextContainer = styled.div`
+  height: 90%
+`
+
+const NavBarItem = styled.div`
+  height: 14.28%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+`
+
 const NavbarContainer = () => {
   const [naviconsState, setNaviconsState] = useState(false)
+
+  const sections = [
+    'Introducing',
+    'Somethings about me',
+    'What can I do',
+    'My personal projects',
+    'Career path & Experience',
+    'Testimonials & Certificates',
+    'Contact me'
+  ]
 
   return (
     <Navbarmain>
       <Navtext naviconsState={naviconsState}>
-        <div style={{ height: '90%' }}>
-          <div style={{
-            height: '14.28%',
-            fontSize: '18px',
-            display: "flex",
-            alignItems: "center",
-          }}>
-            <BsFileArrowUp />
-            <span style={{ marginLeft: '0.5rem' }}>Introducing</span>
-          </div>
-          <div style={{
-            height: '14.28%',
-            fontSize: '18px',
-            display: "flex",
-            alignItems: "center",
-          }}>
-            <BsFileArrowUp />
-            <span style={{ marginLeft: '0.5rem' }}>Somethings about me</span>
-          </div>
-          <div style={{
-            height: '14.28%',
-            fontSize: '18px',
-            display: "flex",
-            alignItems: "center",
-          }}>
-            <BsFileArrowUp />
-            <span style={{ marginLeft: '0.5rem' }}>What can I do</span>
-          </div>
-          <div style={{
-            height: '14.28%',
-            fontSize: '18px',
-            display: "flex",
-            alignItems: "center",
-          }}>
-            <BsFileArrowUp />
-            <span style={{ marginLeft: '0.5rem' }}>My personal projects</span>
-          </div>
-          <div style={{
-            height: '14.28%',
-            fontSize: '18px',
-            display: "flex",
-            alignItems: "center",
-          }}>
-            <BsFileArrowUp />
-            <span style={{ marginLeft: '0.5rem' }}>Career path & Experience</span>
-          </div>
-          <div style={{
-            height: '14.28%',
-            fontSize: '18px',
-            display: "flex",
-            alignItems: "center",
-          }}>
-            <BsFileArrowUp />
-            <span style={{ marginLeft: '0.5rem' }}>Testimonials & Certificates</span>
-          </div>
-          <div style={{
-            height: '14.28%',
-            fontSize: '18px',
-            display: "flex",
-            alignItems: "center",
-          }}>
-            <BsFileArrowUp />
-            <span style={{ marginLeft: '0.5rem' }}>Contact me</span>
-          </div>
-        </div>
+        <NavBarTextContainer>
+          {
+            sections.map((section) =>
+              <NavBarItem>
+                <BsFileArrowUp />
+                <span style={{ marginLeft: '0.5rem' }}>{section}</span>
+              </NavBarItem>
+            )
+          }
+        </NavBarTextContainer>
         <div style={{ height: '10%' }}>
           <div style={{ height: '100%', fontSize: '25px', display: 'flex', justifyContent: 'space-evenly' }}>
             <AiOutlineLinkedin style={{ height: '100%', fontSize: '25px' }} />
