@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import Logo from '../assets/logo.png'
 import { BsFileArrowUp, BsFileArrowDown } from 'react-icons/bs'
 import { AiOutlineLinkedin, AiFillFacebook, AiFillGithub } from "react-icons/ai";
+import { respondTo } from "../mediaquery/_respondTo";
 
 const Navbarmain = styled.div`
   height: 100%;
@@ -23,7 +24,12 @@ const Navicons = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: #212529;
-`
+  ${respondTo.md`
+      width: 10%;
+      height: 100%;
+      background-color: black;
+    `}
+  `
 
 const Navtext = styled.div`
   color: white;
@@ -68,8 +74,16 @@ const NavBarIconsBox = styled.div`
   justify-content: space-evenly
 `
 
+const LogoContainer = styled.img`
+  display: ${({ widthquery }) => widthquery > 992 ? "none" : "block"};
+`
+
+
 const NavbarContainer = () => {
   const [naviconsState, setNaviconsState] = useState(false)
+  const [widthquery, setWidthquery] = useState()
+
+  useEffect(() => { setWidthquery(window.innerWidth) }, [widthquery])
 
   const sections = [
     'Introducing',
@@ -81,6 +95,7 @@ const NavbarContainer = () => {
     'Contact me'
   ]
 
+  console.log(widthquery)
   return (
     <Navbarmain>
       <Navtext naviconsState={naviconsState}>
@@ -103,7 +118,7 @@ const NavbarContainer = () => {
         </NavBarIconsContainer>
       </Navtext>
       <Navicons>
-        <img src={Logo} alt="" />
+        <LogoContainer src={Logo} alt="" widthquery={widthquery} />
         <IconContainer>
           {
             naviconsState ?
